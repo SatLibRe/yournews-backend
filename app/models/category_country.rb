@@ -1,0 +1,2 @@
+class CategoryCountry < ApplicationRecord
+end

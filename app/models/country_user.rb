@@ -1,0 +1,2 @@
+class CountryUser < ApplicationRecord
+end
