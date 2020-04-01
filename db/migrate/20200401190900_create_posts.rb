@@ -7,8 +7,8 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :url
       t.string :content
-      t.string :category_id
-      t.string :source_id
+      t.integer :category_id
+      t.integer :source_id
 
       t.timestamps
     end
