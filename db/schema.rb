@@ -76,8 +76,6 @@ ActiveRecord::Schema.define(version: 2020_04_01_191158) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "language"
-    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

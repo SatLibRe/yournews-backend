@@ -16,7 +16,7 @@ Category.destroy_all
 UserSource.destroy_all
 
 
-u1 = User.create(name: "Miles", language: "en", image_url: "string")
+u1 = User.create(name: "Miles")
 c1 = Country.create(name: "Botswana")
 uc1 = CountryUser.create(user_id: u1.id, country_id: c1.id)
 
