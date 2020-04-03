@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get '/sources', to: 'sources#index'
   post '/usersources', to: 'user_sources#create'
   get '/usersources', to: 'user_sources#index'
+  post '/countries', to: 'countries#create'
+  get '/countries', to: 'countries#index'
+  post '/countryusers', to: 'country_users#create'
+  get '/countryusers', to: 'country_users#index'
 end
