@@ -1,0 +1,3 @@
+class CustomQueryUsersController < ApplicationController
+  
+end

@@ -1,0 +1,2 @@
+class CustomQueriesController < ApplicationController
+end

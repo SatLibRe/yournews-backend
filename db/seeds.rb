@@ -14,6 +14,8 @@ Source.destroy_all
 Post.destroy_all 
 Category.destroy_all
 UserSource.destroy_all
+CustomQueryUser.destroy_all
+CustomQuery.destroy_all
 
 
 u1 = User.create(name: "Miles")
@@ -26,6 +28,9 @@ s1 = Source.create(name: "ABC")
 p1 = Post.create(category_id: ca1.id, source_id: s1.id)
 us1 = UserSource.create(user_id: u1.id, source_id: s1.id)
 uc1 =  UserCategory.create(user_id: u1.id, category_id: ca1.id)
+
+cn1 = CustomQuery.create(name: "bitcoin")
+cnu1= CustomQueryUser.create(user_id: u1.id, custom_query_id: cn1.id)
 
 
 
