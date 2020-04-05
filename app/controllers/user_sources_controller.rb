@@ -17,4 +17,11 @@ class UserSourcesController < ApplicationController
     def user_source_params 
         params.require(:user_source).permit(:user_id, :source_id)
     end 
+
+    def destroy 
+        user_source = UserSource.find(params[:id])
+        user_source.delete()
+    end 
+
+    
 end

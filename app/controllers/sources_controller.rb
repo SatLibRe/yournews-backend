@@ -18,4 +18,9 @@ class SourcesController < ApplicationController
         params.require(:source).permit(:name)
     end 
 
+    def destroy 
+        source = Source.find(params[:id])
+        source.delete()
+    end 
+
 end
