@@ -16,7 +16,7 @@ class CountryUsersController < ApplicationController
 
     def destroy 
         country_user = CountryUser.find(params[:id])
-        CountryUser.delete()
+        country_user.delete()
     end 
 
     def country_user_params 

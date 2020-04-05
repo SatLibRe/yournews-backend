@@ -16,7 +16,7 @@ class CustomQueryUsersController < ApplicationController
 
     def destroy 
         custom_query_user = CustomQueryUser.find(params[:id])
-        CustomQueryUser.delete()
+        custom_query_user.delete()
     end 
 
     def custom_query_user_params 

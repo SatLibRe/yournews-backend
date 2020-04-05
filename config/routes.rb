@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/customqueries', to: 'custom_queries#index'
   post '/customqueryusers', to: 'custom_query_users#create'
   get '/customqueryusers', to: 'custom_query_users#index'
-  delete  '/customqueryusers/:id', to: 'custom_query_users#destroy'
+  delete '/customqueryusers/:id', to: 'custom_query_users#destroy'
 
   resources :sources, only: [:index, :show, :create, :destroy]
   # resources :user_sources
