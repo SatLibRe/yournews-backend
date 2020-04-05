@@ -14,6 +14,11 @@ class CountryUsersController < ApplicationController
         render json: country_user
     end 
 
+    def destroy 
+        country_user = CountryUser.find(params[:id])
+        CountryUser.delete()
+    end 
+
     def country_user_params 
         params.require(:country_user).permit(:user_id, :country_id)
     end 

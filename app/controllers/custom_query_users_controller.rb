@@ -14,6 +14,11 @@ class CustomQueryUsersController < ApplicationController
         render json: custom_query_user
     end 
 
+    def destroy 
+        custom_query_user = CustomQueryUser.find(params[:id])
+        CustomQueryUser.delete()
+    end 
+
     def custom_query_user_params 
         params.require(:custom_query_user).permit(:user_id, :custom_query_id)
     end 

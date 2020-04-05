@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     def index 
         users = User.all 
-        render json: users.to_json(include: [:sources, :countries, :custom_queries, :user_sources])
+        render json: users.to_json(include: [:sources, :countries, :custom_queries, :user_sources, :country_users, :custom_query_users])
     end 
 
     def create 
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
     def show 
         user = User.find(params[:id])
-        render json: user.to_json(include: [:sources, :countries, :custom_queries, :user_sources])
+        render json: user.to_json(include: [:sources, :countries, :custom_queries, :user_sources, :country_users, :custom_query_users])
      end 
     
     def destroy 
