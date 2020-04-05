@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   get '/countries', to: 'countries#index'
   post '/countryusers', to: 'country_users#create'
   get '/countryusers', to: 'country_users#index'
+  post '/customqueries', to: 'custom_queries#create'
+  get '/customqueries', to: 'custom_queries#index'
+  post '/customqueryusers', to: 'custom_query_users#create'
+  get '/customqueryusers', to: 'custom_query_users#index'
 end
