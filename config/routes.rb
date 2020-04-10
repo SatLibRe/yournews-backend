@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/customqueryusers', to: 'custom_query_users#index'
   delete '/customqueryusers/:id', to: 'custom_query_users#destroy'
   post "/login", to: "auth#login"
+  get "/autologin", to: "auth#autologin"
 
   resources :sources, only: [:index, :show, :create, :destroy]
   # resources :user_sources
