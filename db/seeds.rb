@@ -18,7 +18,7 @@ CustomQueryUser.destroy_all
 CustomQuery.destroy_all
 
 
-u1 = User.create(name: "Miles")
+u1 = User.create(name: "Miles", password:"11")
 c1 = Country.create(name: "Botswana")
 uc1 = CountryUser.create(user_id: u1.id, country_id: c1.id)
 

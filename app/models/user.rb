@@ -8,4 +8,7 @@ class User < ApplicationRecord
     has_many :custom_query_users
     has_many :custom_queries, through: :custom_query_users
 
+    has_secure_password
+
+    validates :name, uniqueness: true
 end
