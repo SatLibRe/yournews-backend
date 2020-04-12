@@ -3,16 +3,16 @@ class AuthController < ApplicationController
     def login
         user = User.find_by(name: params[:name])
         if user && user.authenticate(params[:password]) 
-            render json: user
+            token = JWT.encode({user_id: user.id}, "code")
+            render json: {user: user, token: token}
         else 
             render json: {errors: "Your Username or Password is inncorrect"}
         end 
     end 
 
     def autologin 
-        user = User.find_by(id: request.headers["Authorization"])
-        if user 
-            render json: user
+        if session_user
+            render json: session_user
         else 
             render json: {errors: "Never heard of her... "}
         end 

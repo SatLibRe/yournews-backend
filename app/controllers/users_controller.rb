@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     def create 
        user = User.new(name: params[:name],  password: params[:password])
         if user.save 
-           render json: user
+            token = JWT.encode({user_id: user.id}, "code")
+            render json: {user: user, token: token}
         else 
            render json: {errors: user.errors.full_messages}
         end 
